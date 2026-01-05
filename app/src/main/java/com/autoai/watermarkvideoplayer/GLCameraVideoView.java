@@ -30,10 +30,10 @@ public class GLCameraVideoView extends GLSurfaceView {
 
     public enum CameraPosition {
         ALL(0.0f, 0.0f, 1.0f, 1.0f),
-        TOP_LEFT(0.0f, 0.1f, 0.5f, 0.45f), // x, y, width, height (归一化坐标)
-        TOP_RIGHT(0.5f, 0.1f, 0.5f, 0.45f),
-        BOTTOM_LEFT(0.0f, 0.55f, 0.5f, 0.45f),
-        BOTTOM_RIGHT(0.5f, 0.55f, 0.5f, 0.45f);
+        TOP_LEFT(0.0f, 0.0f, 0.5f, 0.5f), // x, y, width, height (归一化坐标)
+        TOP_RIGHT(0.5f, 0.0f, 0.5f, 0.5f),
+        BOTTOM_LEFT(0.0f, 0.5f, 0.5f, 0.5f),
+        BOTTOM_RIGHT(0.5f, 0.5f, 0.5f, 0.5f);
 
         final float x, y, width, height;
 
