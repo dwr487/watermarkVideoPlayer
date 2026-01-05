@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <!-- Video display area -->
+    <com.autoai.watermarkvideoplayer.GLCameraVideoView
+        android:id="@+id/gl_camera_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Control area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:background="@color/surface">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- File selection -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/btn_select_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_select_video"
+                    android:backgroundTint="@color/button_bg"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_video_path"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/label_no_video"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+            </LinearLayout>
+
+            <!-- Watermark height control -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_watermark_height"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:layout_marginEnd="8dp" />
+
+                <SeekBar
+                    android:id="@+id/seekbar_watermark_height"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="30"
+                    android:progress="10"
+                    android:progressTint="@color/accent"
+                    android:thumbTint="@color/accent" />
+
+                <TextView
+                    android:id="@+id/tv_watermark_height"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="10%"
+                    android:textColor="@color/text_primary"
+                    android:textSize="14sp"
+                    android:gravity="end"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Camera position label -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_camera_switch"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Camera position switch buttons -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:alignmentMode="alignBounds"
+                android:useDefaultMargins="true">
+
+                <Button
+                    android:id="@+id/btn_camera_all"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/btn_camera_all"
+                    android:backgroundTint="@color/button_bg_selected"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_camera_top_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/btn_camera_top_left"
+                    android:backgroundTint="@color/button_bg"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_camera_top_right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/btn_camera_top_right"
+                    android:backgroundTint="@color/button_bg"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_camera_bottom_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/btn_camera_bottom_left"
+                    android:backgroundTint="@color/button_bg"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_camera_bottom_right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/btn_camera_bottom_right"
+                    android:backgroundTint="@color/button_bg"
+                    android:textColor="@color/white" />
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

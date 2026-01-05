@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AVM水印播放器</string>
+
+    <!-- Button labels -->
+    <string name="btn_select_video">选择视频文件</string>
+    <string name="btn_camera_all">全视图</string>
+    <string name="btn_camera_top_left">左上</string>
+    <string name="btn_camera_top_right">右上</string>
+    <string name="btn_camera_bottom_left">左下</string>
+    <string name="btn_camera_bottom_right">右下</string>
+
+    <!-- Labels -->
+    <string name="label_watermark_height">水印高度:</string>
+    <string name="label_video_path">当前视频:</string>
+    <string name="label_no_video">未选择视频</string>
+    <string name="label_camera_switch">摄像头切换</string>
+
+    <!-- Messages -->
+    <string name="msg_permission_required">需要存储权限以读取视频文件</string>
+    <string name="msg_permission_denied">权限被拒绝，无法读取视频文件</string>
+    <string name="msg_video_load_error">视频加载失败</string>
+    <string name="msg_video_loaded">视频加载成功</string>
+
+    <!-- Watermark height percentage -->
+    <string name="watermark_height_format">%d%%</string>
+</resources>
